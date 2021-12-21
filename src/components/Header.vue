@@ -3,81 +3,93 @@
         <div class="logo">
             <img src="../img/dc-logo.png" alt="Logo DC">
         </div>
-
         <div class="nav-bar">
             <ul class="menu">
-                <li></li>
+                <li v-for="(link , index) in links" :key="index">
+                    <a :class="{ 'current' :current.link }" href="link.url" >{{ link.text }}</a>
+                </li>
             </ul>
-        </div> 
-          
+        </div>  
     </header>
-</template>
+    </template>
 
 <script>
 export default {
-  name: "Header",
+  name: 'Header',
   
-  data: function(){
+  data: function() {
       return {
           links: [
-      {        
-          text: 'CHARACTERS',
-          url:'#',
-          current: false,
-      },
-      {
-          text: 'COMICS',
-          url:'#',
-          current: true,
-      },
-      {
-          text: 'MOVEIS',
-          url:'#',
-          current: false,
-      },
-      {
-          text: 'TV',
-          url:'#',
-          current: false,
-      },
-      {
-          text: 'GAMES',
-          url:'#',
-          current: false,
-      },
-      {
-          text: 'COLLECTIBLES',
-          url:'#',
-          current: false,
-      },
-      {
-          text: 'VIDEOS',
-          url:'#',
-          current: false,
-      },
-      {
-          text: 'FANS',
-          url:'#',
-          current: false,
-      },
-      {
-          text: 'NEWS',
-          url:'#',
-          current: false,
-      },
-      {
-          text: 'SHOP',
-          url:'#',
-          current: false,
-      },
-    ],
-    }
+                    {        
+                        text: 'CHARACTERS',
+                        url:'#',
+                        current: false,
+                    },
+                    {
+                        text: 'COMICS',
+                        url:'#',
+                        current: true,
+                    },
+                    {
+                        text: 'MOVEIS',
+                        url:'#',
+                        current: false,
+                    },
+                    {
+                        text: 'TV',
+                        url:'#',
+                        current: false,
+                    },
+                    {
+                        text: 'GAMES',
+                        url:'#',
+                        current: false,
+                    },
+                    {
+                        text: 'COLLECTIBLES',
+                        url:'#',
+                        current: false,
+                    },
+                    {
+                        text: 'VIDEOS',
+                        url:'#',
+                        current: false,
+                    },
+                    {
+                        text: 'FANS',
+                        url:'#',
+                        current: false,
+                    },
+                    {
+                        text: 'NEWS',
+                        url:'#',
+                        current: false,
+                    },
+                    {
+                        text: 'SHOP',
+                        url:'#',
+                        current: false,
+                    },
+                ],
+            };
 
-}
-}
+        },
+};
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
+<style lang="scss">
+    menu{
+        display:flex;
 
+        li{
+            margin-left:5px;
+
+            a{
+                text-decoration:none;
+                &.current{
+                    color:blue;
+                }
+            }
+        }
+    }
 </style>
