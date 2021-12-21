@@ -1,9 +1,14 @@
 <template>
 <section>
-    <div class="comics-list">
-        <!-- componente singolo fumetto SingleComic -->
-            <SingleComic />
+    <div class="comic-wrapper">
+            <div class="comics-list">
+            <!-- componente singolo fumetto SingleComic -->
+            <!-- parte 2 faccio v-for per stampare gli elementi nell'oggetto -->
+                <SingleComic v-for="(comic ,index) in comics" :key="index" :objectComic="comic"/>
+                
+            </div>
     </div>
+    
 </section>
     
 </template>
@@ -99,6 +104,19 @@ export default {
 <style lang="scss" scoped>
 @import "../style/variables.scss";
 section{
-    background-color: black;
-}
+    
+    background-color: #1c1c1c;
+    .comic-wrapper{
+                    margin:auto;
+                   padding-top: 40px;
+                   width:75%;
+                   padding-bottom: 40px;
+                    .comics-list{
+                            display: flex;
+                            flex-wrap: wrap;
+
+                                }
+                    }
+    
+        }
 </style>

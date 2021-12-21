@@ -106,7 +106,7 @@ export default {
                         }
                         a{
                             text-decoration: none;
-                            line-height: 140px;
+                            line-height: 136px;
                             display: inline-block;
                             color:black;
                                 &.current{
