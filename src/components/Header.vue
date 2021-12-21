@@ -1,27 +1,18 @@
 <template>
     <header>
-        <div class="logo">
-            <img src="../img/dc-logo.png" alt="Logo DC">
+        <div class="header-container">
+                <div class="logo">
+                    <img src="../img/dc-logo.png" alt="Logo DC">
+                </div>
+                <div class="nav-bar">
+                    <ul class="menu">
+                        <li v-for="(link , index) in links" :key="index">
+                            <a :class="{ 'current' :link.current }" href="link.url" >{{ link.text }}</a>
+                        </li>
+                    </ul>
+                </div>  
         </div>
-        <div class="nav-bar">
-            <ul class="menu">
-                <!-- <li v-for="(link , index) in links" :key="index">
-                    <a :class="{ 'current' :current.link }" href="link.url" >{{ link.text }}</a>
-                </li> -->
-                <li>
-                    Link
-                </li>
-                <li>
-                    Link
-                </li>
-                <li>
-                    Link
-                </li>
-                <li>
-                    Link
-                </li>
-            </ul>
-        </div>  
+        
     </header>
 </template>
 
@@ -42,7 +33,7 @@ export default {
                         current: true,
                     },
                     {
-                        text: 'MOVEIS',
+                        text: 'MOVIES',
                         url: '#',
                         current: false,
                     },
@@ -88,15 +79,45 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-header{
-    height:180px;
-    display: flex;
-    justify-content: space-between;
-    .nav-bar{
-            .menu{
-            display: flex;
-            }
-    }
+@import '../style/variables.scss';
+.header-container{
+        margin:auto;
+        padding: 0 20px;
+        width: 80%;
+        height:140px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // test
+        // background-color:red;
+        // line-height: 180px;
+        .logo{
+                img{
+                    width: 80px ;
+                    }
+        }
+        .nav-bar{
+                .menu{
+                    display: flex;
+                        li{
+                            font-size: 20px;
+                            margin-left: 20px;
+                            font-weight: bold;
+                        }
+                        a{
+                            text-decoration: none;
+                            line-height: 140px;
+                            display: inline-block;
+                            color:black;
+                                &.current{
+                                color:$brand_primary_color;
+                                border-bottom: 4px solid $brand_primary_color;
+                                
+                                }
+                        }
+                        
+                }
+        }
         
 }
 </style>
