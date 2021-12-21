@@ -23,72 +23,80 @@
             </ul>
         </div>  
     </header>
-    </template>
+</template>
 
 <script>
 export default {
-  name: 'Header',
-  
+  name: "Header",
   data: function() {
       return {
           links: [
                     {        
                         text: 'CHARACTERS',
-                        url:'#',
+                        url: '#',
                         current: false,
                     },
                     {
                         text: 'COMICS',
-                        url:'#',
+                        url: '#',
                         current: true,
                     },
                     {
                         text: 'MOVEIS',
-                        url:'#',
+                        url: '#',
                         current: false,
                     },
                     {
                         text: 'TV',
-                        url:'#',
+                        url: '#',
                         current: false,
                     },
                     {
                         text: 'GAMES',
-                        url:'#',
+                        url: '#',
                         current: false,
                     },
                     {
                         text: 'COLLECTIBLES',
-                        url:'#',
+                        url: '#',
                         current: false,
                     },
                     {
                         text: 'VIDEOS',
-                        url:'#',
+                        url: '#',
                         current: false,
                     },
                     {
                         text: 'FANS',
-                        url:'#',
+                        url: '#',
                         current: false,
                     },
                     {
                         text: 'NEWS',
-                        url:'#',
+                        url: '#',
                         current: false,
                     },
                     {
                         text: 'SHOP',
-                        url:'#',
+                        url: '#',
                         current: false,
                     },
                 ],
             };
-
         },
 };
 </script>
 
-<style lang="scss">
-
+<style lang="scss" scoped>
+header{
+    height:180px;
+    display: flex;
+    justify-content: space-between;
+    .nav-bar{
+            .menu{
+            display: flex;
+            }
+    }
+        
+}
 </style>
