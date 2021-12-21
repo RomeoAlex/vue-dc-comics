@@ -1,16 +1,18 @@
 <template>
   <div id="app">
-    <Header/>
+    <Header />
+    <ComicsList />
   </div>
 </template>
 
 <script>
 import Header from "./components/Header.vue";
+import ComicsList from "./components/ComicsList.vue";
 
 export default {
   name: "App",
   components: {
-    Header,
+    Header, ComicsList,
   }
 };
 </script>
