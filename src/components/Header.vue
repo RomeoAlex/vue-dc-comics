@@ -5,8 +5,20 @@
         </div>
         <div class="nav-bar">
             <ul class="menu">
-                <li v-for="(link , index) in links" :key="index">
+                <!-- <li v-for="(link , index) in links" :key="index">
                     <a :class="{ 'current' :current.link }" href="link.url" >{{ link.text }}</a>
+                </li> -->
+                <li>
+                    Link
+                </li>
+                <li>
+                    Link
+                </li>
+                <li>
+                    Link
+                </li>
+                <li>
+                    Link
                 </li>
             </ul>
         </div>  
@@ -78,18 +90,5 @@ export default {
 </script>
 
 <style lang="scss">
-    menu{
-        display:flex;
 
-        li{
-            margin-left:5px;
-
-            a{
-                text-decoration:none;
-                &.current{
-                    color:blue;
-                }
-            }
-        }
-    }
 </style>
