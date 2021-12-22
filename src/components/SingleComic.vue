@@ -1,4 +1,5 @@
 <template>
+
     <div class="comic">
         <img :src="objectComic.thumb" :alt="objectComic.series">
         <span class="comic-title">
@@ -22,7 +23,6 @@ export default {
             display: block;
             color:white;
             font-size: 20px;
-            
         }
 }
 </style>

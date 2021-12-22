@@ -1,5 +1,11 @@
 <template>
 <section>
+    <div class="banner">
+
+    </div>
+    <section>
+        
+    </section>
     <div class="comic-wrapper">
             <div class="comics-list">
             <!-- componente singolo fumetto SingleComic -->
